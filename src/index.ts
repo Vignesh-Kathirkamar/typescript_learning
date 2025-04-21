@@ -23,4 +23,15 @@ let user: [number, string] = [1, 'Mosh']
 // const medium = 2;
 // const large = 3;
 
+
+// If we use "const" enum, the complier will generate more optimized code
 enum Size {small=0, medium=1, large=2};
+
+// Functions
+function calculateTax(income: number, taxYear:number = 2022) {
+    if ((taxYear || 2022) < 2022)
+        return income*1.2;
+    return income*1.3;
+}
+
+calculateTax(10000)
