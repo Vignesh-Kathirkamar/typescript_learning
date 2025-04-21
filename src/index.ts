@@ -29,9 +29,22 @@ enum Size {small=0, medium=1, large=2};
 
 // Functions
 function calculateTax(income: number, taxYear:number = 2022) {
-    if ((taxYear || 2022) < 2022)
+    if (taxYear < 2022)
         return income*1.2;
     return income*1.3;
 }
 
 calculateTax(10000)
+
+// objects
+let employee:{
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+} = { id: 1, 
+    name: '',
+    retire:(date: Date)=>{ 
+        console.log(date);
+    }
+};
+employee.name = 'Vignesh'
